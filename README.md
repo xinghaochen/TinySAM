@@ -59,7 +59,7 @@ We follow the settting of original [SAM](https://arxiv.org/abs/2304.02643) paper
 | SAM-B                 |677| 41.0     | 40.8       | 
 | FastSAM                 |344| 37.9     | 34.5       | 
 | MobileSAM            | 232|41.0     | 37.0       | 
-| **TinySAM**            | 232|41.9     | 38.6       | 
+| **TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/1.0/tinysam.pth)       | 232|41.9     | 38.6       | 
 | **Q-TinySAM**            | 61|41.3     | 37.7       | 
 
 
