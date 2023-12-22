@@ -1,32 +1,33 @@
 # TinySAM
 **TinySAM: Pushing the Envelope for Efficient Segment Anything Model**
 
-Han Shu, Wenshuo Li, Yehui Tang, Yiman Zhang, Yihao Chen, Houqiang Li, Yunhe Wang, Xinghao Chen
+*Han Shu, Wenshuo Li, Yehui Tang, Yiman Zhang, Yihao Chen, Houqiang Li, Yunhe Wang, Xinghao Chen*
 
 [Paper Link](https://arxiv.org/abs/2312.13789)
 
 
 ## [Updates](#updates)
 
-* **2023/12/18**: Pre-trained models and codes of TinySAM are released both in [Pytorch](https://github.com/xinghaochen/TinySAM) and [Mindspore](https://gitee.com/mindspore/models/tree/master/research/cv/TinySAM).
+* **2023/12/22**: Pre-trained models and codes of TinySAM are released both in [Pytorch](https://github.com/xinghaochen/TinySAM) and [Mindspore](https://gitee.com/mindspore/models/tree/master/research/cv/TinySAM).
 
 ## [Overview](#overview)
 
-We first propose a full-stage knowledge distillation method with online hard prompt sampling strategy to distill a lightweight student model. We also adapt the post-training quantization to the promptable segmentation task and further reducing the computational cost. Moreover, a hierarchical segmenting everything strategy is proposed to accelerate the everything inference by with almost no performance degradation. With all these proposed methods, our TinySAM leads to orders of magnitude computational reduction and pushes the envelope for efficient segment anything task. Extensive experiments on various zero-shot transfer tasks demonstrate the significantly advantageous performance of our TinySAM against counterpart methods.
-<p align="center">
-<img width="900" alt="compare" src="./fig/framework.png">
-</p>
+We propose a framework to obtain a tiny segment anything model (**TinySAM**) while maintaining the strong zero-shot performance. We first propose a full-stage knowledge distillation method with online hard prompt sampling strategy to distill a lightweight student model. We also adapt the post-training quantization to the promptable segmentation task and further reducing the computational cost. Moreover, a hierarchical segmenting everything strategy is proposed to accelerate the everything inference by with almost no performance degradation. With all these proposed methods, our TinySAM leads to orders of magnitude computational reduction and pushes the envelope for efficient segment anything task. Extensive experiments on various zero-shot transfer tasks demonstrate the significantly advantageous performance of our TinySAM against counterpart methods.
 
-*In figure(a), we show the overall framework of the proposed method. Consisting the modules of the full-stage knowledge distillation, the post training quantization and the hierarchical everything inference, the computation cost is down-scaled by magnitudes. Figure(b) shows that the proposed TinySAM can save considerable computation cost while maintaining the performance.*
+![framework](./fig/framework.png)
+<div align=center>
+<sup>Figure 1: Overall framework and zero-shot results of TinySAM.</sup>
+</div>
 
-## [Contents](#contents)
+![everything](./fig/everything.png)
+<div align=center>
+<sup>Figure 2: Our hierarchical strategy for everything mode.</sup>
+</div>
 
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Evaluation](#evaluation)
-- [Acknowledgements](#acknowledgement)
-- [Citation](#citation)
-- [License](#license)
+![vis](./fig/vis.png)
+<div align=center>
+<sup>Figure 3: Visualization results of TinySAM.</sup>
+</div>
 
 ## [Requirements](#requirements) 
 The code requires `python>=3.7` and we use `torch==1.10.2` and `torchvision==0.11.3`. To visualize the results, `matplotlib>=3.5.1` is also required.  
