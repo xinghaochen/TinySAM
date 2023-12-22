@@ -3,7 +3,7 @@
 
 Han Shu, Wenshuo Li, Yehui Tang, Yiman Zhang, Yihao Chen, Houqiang Li, Yunhe Wang, Xinghao Chen
 
-[Paper Link](https://arxiv.org/pdf/.pdf)
+[Paper Link](https://arxiv.org/abs/2312.13789)
 
 
 ## Updates
@@ -71,7 +71,7 @@ We thank the following projects, which have inspired the work of TinySAM a lot, 
 @article{tinysam,
   title={TinySAM: Pushing the Envelope for Efficient Segment Anything Model},
   author={Shu, Han and Li, Wenshuo and Tang, Yehui and Zhang, Yiman and Chen, Yihao and Wang, Yunhe and Chen, Xinghao},
-  journal={arXiv preprint arXiv:XXXXX},
+  journal={arXiv preprint arXiv:2312.13789},
   year={2023}
 }
 ```
