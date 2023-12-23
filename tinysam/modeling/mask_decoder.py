@@ -98,7 +98,7 @@ class MaskDecoder(nn.Module):
         )
 
         # Select the correct mask or masks for output
-        mask_slice = slice(0, 1)
+        mask_slice = slice(1, None)
         masks = masks[:, mask_slice, :, :]
         iou_pred = iou_pred[:, mask_slice]
 
