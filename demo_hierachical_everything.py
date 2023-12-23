@@ -29,7 +29,7 @@ mask_generator = SamHierarchicalMaskGenerator(sam)
 
 
 
-image = cv2.imread('fig/picture2.jpg')
+image = cv2.imread('fig/picture3.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 masks = mask_generator.hierarchical_generate(image)
