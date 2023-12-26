@@ -52,7 +52,7 @@ python demo_hierachical_everything.py
 ```
 
 ## Evaluation
-We follow the settting of original [SAM](https://arxiv.org/abs/2304.02643) paper and evaluate the zero-shot instance segmentaion on COCO and LVIS dataset. The experiment results are described as followed.
+We follow the setting of original [SAM](https://arxiv.org/abs/2304.02643) paper and evaluate the zero-shot instance segmentaion on COCO and LVIS dataset. The experiment results are described as followed.
 
 | Model               | FLOPs (G) |COCO AP (%) | LVIS AP (%)| 
 | ------------------- | -------- | ------- |------- |
