@@ -3,12 +3,18 @@
 
 *Han Shu, Wenshuo Li, Yehui Tang, Yiman Zhang, Yihao Chen, Houqiang Li, Yunhe Wang, Xinghao Chen*
 
+*arXiv 2023*
+
 [[`Paper`](https://arxiv.org/abs/2312.13789)] [[`BibTeX`](#citation)]
 
-
+<p align="left">
+<img width="300" alt="compare" src="./fig/tinysam_point.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="300" alt="compare" src="./fig/tinysam_box.gif">
+</p>
 
 ## Updates
 
+* **2023/12/27**: Pre-trained models and codes of [Q-TinySAM]((#usage)) (quantized variant) are released.
+* **2023/12/27**: [Evaluation](#evaluation) codes for zero-shot instance segmentation task on COCO are released.
 * **2023/12/22**: Pre-trained models and codes of TinySAM are released both in [Pytorch](https://github.com/xinghaochen/TinySAM) and [Mindspore](https://gitee.com/mindspore/models/tree/master/research/cv/TinySAM).
 
 ## Overview
@@ -51,8 +57,13 @@ python demo.py
 python demo_hierachical_everything.py
 ```
 
+4. Run the demo code for quantization inference.
+```
+python demo_quant.py
+```
+
 ## Evaluation
-We follow the settting of original [SAM](https://arxiv.org/abs/2304.02643) paper and evaluate the zero-shot instance segmentaion on COCO and LVIS dataset. The experiment results are described as followed.
+We follow the setting of original [SAM](https://arxiv.org/abs/2304.02643) paper and evaluate the zero-shot instance segmentaion on COCO and LVIS dataset. The experiment results are described as followed.
 
 | Model               | FLOPs (G) |COCO AP (%) | LVIS AP (%)| 
 | ------------------- | -------- | ------- |------- |
@@ -62,8 +73,27 @@ We follow the settting of original [SAM](https://arxiv.org/abs/2304.02643) paper
 | FastSAM                 |344| 37.9     | 34.5       | 
 | MobileSAM            | 232|41.0     | 37.0       | 
 | **TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/1.0/tinysam.pth)       | 232|41.9     | 38.6       | 
-| **Q-TinySAM**            | 61|41.3     | 37.7       | 
+| **Q-TinySAM**            | 61|41.3     | 37.2      | 
 
+Run the following code to perform evaluation for zero-shot instance segmentation on COCO dataset.
+```
+cd eval; sh eval_coco.sh
+```
+The results should be:
+```
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.419
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.683
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.436
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.260
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.456
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.583
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.325
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.511
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.532
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.390
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.577
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.671
+```
 
 ## Acknowledgements
 We thank the following projects: [SAM](https://github.com/facebookresearch/segment-anything), [MobileSAM](https://github.com/ChaoningZhang/MobileSAM), [TinyViT](https://github.com/microsoft/Cream).
