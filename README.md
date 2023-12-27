@@ -5,7 +5,7 @@
 
 *arXiv 2023*
 
-[[`Paper`](https://arxiv.org/abs/2312.13789)] [[`BibTeX`](#citation)]
+[[`Paper`](https://arxiv.org/abs/2312.13789)] [[`BibTeX`](#citation)]  [[`Hugging Face Demo`](https://huggingface.co/spaces/merve/tinysam)]
 
 <p align="left">
 <img width="300" alt="compare" src="./fig/tinysam_point.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="300" alt="compare" src="./fig/tinysam_box.gif">
@@ -13,6 +13,7 @@
 
 ## Updates
 
+* **2023/12/27**: [Models](https://huggingface.co/merve/tinysam) and [demo](https://huggingface.co/spaces/merve/tinysam) of TinySAM are now available in Hugging Face. Thanks for [merveenoyan](https://github.com/merveenoyan).
 * **2023/12/27**: Pre-trained models and codes of [Q-TinySAM](#usage) (quantized variant) are released.
 * **2023/12/27**: [Evaluation](#evaluation) codes for zero-shot instance segmentation task on COCO are released.
 * **2023/12/22**: Pre-trained models and codes of TinySAM are released both in [Pytorch](https://github.com/xinghaochen/TinySAM) and [Mindspore](https://gitee.com/mindspore/models/tree/master/research/cv/TinySAM).
