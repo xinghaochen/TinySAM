@@ -58,17 +58,14 @@ def eval_zero_shot(eval_type,val_img_path,val_json_path,vit_det_file_path,sam_ch
             box=input_box[None, :],
         )
         
-
         new_seg=mask_util.encode(np.array(masks[np.argmax(ious)],order="F", dtype="uint8"))
         new_seg["counts"] = new_seg["counts"].decode("utf-8")
         res[i]["segmentation"]=new_seg
 
-    
     for c in res:
          c.pop("bbox", None)
     save_res_json_file=eval_type+'_res_tinysam.json'
     
-            
     with open(save_res_json_file, 'w') as fnew:
         json.dump(res, fnew)
         
@@ -89,10 +86,11 @@ def eval_zero_shot(eval_type,val_img_path,val_json_path,vit_det_file_path,sam_ch
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='zero shot instance segmentation on COCO or lvis')
     parser.add_argument('--eval_type', type=str, default='coco', help='coco or lvis')
-    parser.add_argument('--val_img_path', type=str, default="/home/ma-user/work/data/coco/val2017/", help='path to validation imgs')
+    parser.add_argument('--val_img_path', type=str, default="data/coco/val2017/", help='path to validation imgs')
     parser.add_argument('--val_json_path', type=str, default="json_files/instances_val2017.json", help='path to val2017 annotation json file')
     parser.add_argument('--vit_det_file_path', type=str, default="json_files/coco_instances_results_vitdet.json", help='path to vitdet detection results json file')
     parser.add_argument('--sam_checkpoint_path', type=str, default="../weights/tinysam.pth", help='path to ckpt file')
     
-    args = parser.parse_args()       eval_zero_shot(eval_type=args.eval_type,val_img_path=args.val_img_path,val_json_path=args.val_json_path,vit_det_file_path=args.vit_det_file_path,sam_checkpoint_path=args.sam_checkpoint_path)
+    args = parser.parse_args()
+    eval_zero_shot(eval_type=args.eval_type,val_img_path=args.val_img_path,val_json_path=args.val_json_path,vit_det_file_path=args.vit_det_file_path,sam_checkpoint_path=args.sam_checkpoint_path)
     
