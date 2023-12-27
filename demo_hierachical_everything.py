@@ -24,12 +24,14 @@ from tinysam import sam_model_registry, SamHierarchicalMaskGenerator
 
 model_type = "vit_t"
 sam = sam_model_registry[model_type](checkpoint="./weights/tinysam.pth")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+sam.to(device=device)
 sam.eval()
 mask_generator = SamHierarchicalMaskGenerator(sam)
 
 
 
-image = cv2.imread('fig/picture3.jpg')
+image = cv2.imread('fig/picture2.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 masks = mask_generator.hierarchical_generate(image)

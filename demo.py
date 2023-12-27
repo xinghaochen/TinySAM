@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import torch
+import cv2
 
 def show_mask(mask, ax, random_color=False):
     if random_color:
@@ -27,10 +29,11 @@ from tinysam import sam_model_registry, SamPredictor
 
 model_type = "vit_t"
 sam = sam_model_registry[model_type](checkpoint="./weights/tinysam.pth")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+sam.to(device=device)
 
 predictor = SamPredictor(sam)
 
-import cv2
 image = cv2.imread('fig/picture1.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
