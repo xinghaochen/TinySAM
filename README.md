@@ -104,7 +104,7 @@ We thank the following projects: [SAM](https://github.com/facebookresearch/segme
 ```bibtex
 @article{tinysam,
   title={TinySAM: Pushing the Envelope for Efficient Segment Anything Model},
-  author={Shu, Han and Li, Wenshuo and Tang, Yehui and Zhang, Yiman and Chen, Yihao and Wang, Yunhe and Chen, Xinghao},
+  author={Shu, Han and Li, Wenshuo and Tang, Yehui and Zhang, Yiman and Chen, Yihao and Li, Houqiang and Wang, Yunhe and Chen, Xinghao},
   journal={arXiv preprint arXiv:2312.13789},
   year={2023}
 }
