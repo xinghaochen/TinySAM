@@ -76,8 +76,8 @@ We follow the setting of original [SAM](https://arxiv.org/abs/2304.02643) paper 
 | **TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/1.0/tinysam.pth)       | 232|41.9     | 38.6       | 
 | **Q-TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/2.0/tinysam_w8a8.pth)            | 61|41.3     | 37.2      | 
 
-First download the detection boxes ([`coco_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/coco_instances_results_vitdet.json)) produced by ViTDet model, as well as the ground-truth instance segmentation labels([`instances_val2017.json`](https://github.com/xinghaochen/TinySAM/releases/download/3.0/instances_val2017.json)) and put them into `eval/json_files`. 
-Related json files for LVIS dataset are available in [`lvis_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/lvis_instances_results_vitdet.json) and [`lvis_v1_val.json`](https://github.com/xinghaochen/TinySAM/releases/download/3.0/lvis_v1_val.json).
+First download the detection boxes ([`coco_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/coco_instances_results_vitdet.json)) produced by ViTDet model, as well as the ground-truth instance segmentation labels([`instances_val2017.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/instances_val2017.json)) and put them into `eval/json_files`. 
+Related json files for LVIS dataset are available in [`lvis_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/3.0/lvis_instances_results_vitdet.json) and [`lvis_v1_val.json`](https://github.com/xinghaochen/TinySAM/releases/download/3.0/lvis_v1_val.json).
 
 Run the following code to perform evaluation for zero-shot instance segmentation on COCO dataset.
 ```
