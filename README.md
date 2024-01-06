@@ -5,14 +5,17 @@
 
 *arXiv 2023*
 
-[[`Paper`](https://arxiv.org/abs/2312.13789)] [[`BibTeX`](#citation)]  [[`Hugging Face Demo`](https://huggingface.co/spaces/merve/tinysam)] [[`OpenXLab Demo`](https://openxlab.org.cn/apps/detail/shuh15/TinySAM)]
+<a href="https://arxiv.org/abs/2312.13789"><img src="https://img.shields.io/static/v1?label=Paper&message=arXiv&color=red&logo=arxiv"></a>
+<a href="https://huggingface.co/spaces/merve/tinysam"><img src="https://img.shields.io/static/v1?label=HuggingFace&message=Demo&color=yellow"></a>
+[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/shuh15/TinySAM)
+
 
 <p align="left">
 <img width="300" alt="compare" src="./fig/tinysam_point.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="300" alt="compare" src="./fig/tinysam_box.gif">
 </p>
 
 ## Updates
-* **2024/01/06**: [Demo](https://openxlab.org.cn/apps/detail/shuh15/TinySAM) of TinySAM are now available in **OpenXLab**. Thanks for the GPU grant.
+* **2024/01/06**: [Demo](https://openxlab.org.cn/apps/detail/shuh15/TinySAM) of TinySAM is now available in **OpenXLab**. Thanks for the GPU grant.
 * **2023/12/27**: [Models](https://huggingface.co/merve/tinysam) and [demo](https://huggingface.co/spaces/merve/tinysam) of TinySAM are now available in **Hugging Face**. Thanks for [merveenoyan](https://github.com/merveenoyan).
 * **2023/12/27**: Pre-trained models and codes of [Q-TinySAM](#usage) (quantized variant) are released.
 * **2023/12/27**: [Evaluation](#evaluation) codes for zero-shot instance segmentation task on COCO are released.
