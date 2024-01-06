@@ -1,19 +1,19 @@
 # TinySAM
-**TinySAM: Pushing the Envelope for Efficient Segment Anything Model**
+### **TinySAM: Pushing the Envelope for Efficient Segment Anything Model**
 
 *Han Shu, Wenshuo Li, Yehui Tang, Yiman Zhang, Yihao Chen, Houqiang Li, Yunhe Wang, Xinghao Chen*
 
 *arXiv 2023*
 
-[[`Paper`](https://arxiv.org/abs/2312.13789)] [[`BibTeX`](#citation)]  [[`Hugging Face Demo`](https://huggingface.co/spaces/merve/tinysam)]
+[[`Paper`](https://arxiv.org/abs/2312.13789)] [[`BibTeX`](#citation)]  [[`Hugging Face Demo`](https://huggingface.co/spaces/merve/tinysam)] [[`OpenXLab Demo`](https://openxlab.org.cn/apps/detail/shuh15/TinySAM)]
 
 <p align="left">
 <img width="300" alt="compare" src="./fig/tinysam_point.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="300" alt="compare" src="./fig/tinysam_box.gif">
 </p>
 
 ## Updates
-
-* **2023/12/27**: [Models](https://huggingface.co/merve/tinysam) and [demo](https://huggingface.co/spaces/merve/tinysam) of TinySAM are now available in Hugging Face. Thanks for [merveenoyan](https://github.com/merveenoyan).
+* **2024/01/06**: [Demo](https://openxlab.org.cn/apps/detail/shuh15/TinySAM) of TinySAM are now available in **OpenXLab**. Thanks for the GPU grant.
+* **2023/12/27**: [Models](https://huggingface.co/merve/tinysam) and [demo](https://huggingface.co/spaces/merve/tinysam) of TinySAM are now available in **Hugging Face**. Thanks for [merveenoyan](https://github.com/merveenoyan).
 * **2023/12/27**: Pre-trained models and codes of [Q-TinySAM](#usage) (quantized variant) are released.
 * **2023/12/27**: [Evaluation](#evaluation) codes for zero-shot instance segmentation task on COCO are released.
 * **2023/12/22**: Pre-trained models and codes of TinySAM are released both in [Pytorch](https://github.com/xinghaochen/TinySAM) and [Mindspore](https://gitee.com/mindspore/models/tree/master/research/cv/TinySAM).
@@ -76,7 +76,8 @@ We follow the setting of original [SAM](https://arxiv.org/abs/2304.02643) paper 
 | **TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/1.0/tinysam.pth)       | 232|41.9     | 38.6       | 
 | **Q-TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/2.0/tinysam_w8a8.pth)            | 61|41.3     | 37.2      | 
 
-First download the detection boxes ([`coco_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/coco_instances_results_vitdet.json)) produced by ViTDet model, as well as the ground-truth instance segmentation labels([`instances_val2017.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/instances_val2017.json)) and put them into `eval/json_files`.
+First download the detection boxes ([`coco_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/coco_instances_results_vitdet.json)) produced by ViTDet model, as well as the ground-truth instance segmentation labels([`instances_val2017.json`](https://github.com/xinghaochen/TinySAM/releases/download/3.0/instances_val2017.json)) and put them into `eval/json_files`. 
+Related json files for LVIS dataset are available in [`lvis_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/lvis_instances_results_vitdet.json) and [`lvis_v1_val.json`](https://github.com/xinghaochen/TinySAM/releases/download/3.0/lvis_v1_val.json).
 
 Run the following code to perform evaluation for zero-shot instance segmentation on COCO dataset.
 ```
