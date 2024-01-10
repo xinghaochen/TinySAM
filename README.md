@@ -71,13 +71,15 @@ We follow the setting of original [SAM](https://arxiv.org/abs/2304.02643) paper 
 
 | Model               | FLOPs (G) |COCO AP (%) | LVIS AP (%)| 
 | ------------------- | -------- | ------- |------- |
-| SAM-H                 |3166| 46.5     | 44.7       | 
-| SAM-L                 |1681| 45.5     | 43.5       | 
-| SAM-B                 |677| 41.0     | 40.8       | 
+| SAM-H                 |3166| 46.6/46.5*     | 44.7       | 
+| SAM-L                 |1681| 46.2/45.5*     | 43.5       | 
+| SAM-B                 |677| 43.4/41.0*     | 40.8       | 
 | FastSAM                 |344| 37.9     | 34.5       | 
 | MobileSAM            | 232|41.0     | 37.0       | 
 | **TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/1.0/tinysam.pth)       | 232|41.9     | 38.6       | 
 | **Q-TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/2.0/tinysam_w8a8.pth)            | 61|41.3     | 37.2      | 
+
+<sup>\* Results of single output ([`multimask_output=False`](https://github.com/facebookresearch/segment-anything/blob/main/segment_anything/predictor.py#L98)). </sup></br>
 
 First download the detection boxes ([`coco_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/coco_instances_results_vitdet.json)) produced by ViTDet model, as well as the ground-truth instance segmentation labels([`instances_val2017.json`](https://github.com/xinghaochen/TinySAM/releases/download/2.0/instances_val2017.json)) and put them into `eval/json_files`. 
 Related json files for LVIS dataset are available in [`lvis_instances_results_vitdet.json`](https://github.com/xinghaochen/TinySAM/releases/download/3.0/lvis_instances_results_vitdet.json) and [`lvis_v1_val.json`](https://github.com/xinghaochen/TinySAM/releases/download/3.0/lvis_v1_val.json).
