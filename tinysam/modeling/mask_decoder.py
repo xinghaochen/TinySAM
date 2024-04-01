@@ -83,8 +83,6 @@ class MaskDecoder(nn.Module):
           image_pe (torch.Tensor): positional encoding with the shape of image_embeddings
           sparse_prompt_embeddings (torch.Tensor): the embeddings of the points and boxes
           dense_prompt_embeddings (torch.Tensor): the embeddings of the mask inputs
-          multimask_output (bool): Whether to return multiple masks or a single
-            mask.
 
         Returns:
           torch.Tensor: batched predicted masks

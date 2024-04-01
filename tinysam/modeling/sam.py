@@ -55,7 +55,6 @@ class Sam(nn.Module):
     def forward(
         self,
         batched_input: List[Dict[str, Any]],
-        multimask_output: bool,
     ) -> List[Dict[str, torch.Tensor]]:
         """
         Predicts masks end-to-end from provided images and prompts.
@@ -79,8 +78,6 @@ class Sam(nn.Module):
                 Already transformed to the input frame of the model.
               'mask_inputs': (torch.Tensor) Batched mask inputs to the model,
                 in the form Bx1xHxW.
-          multimask_output (bool): Whether the model should predict multiple
-            disambiguating masks, or return a single mask.
 
         Returns:
           (list(dict)): A list over input images, where each element is
@@ -114,7 +111,6 @@ class Sam(nn.Module):
                 image_pe=self.prompt_encoder.get_dense_pe(),
                 sparse_prompt_embeddings=sparse_embeddings,
                 dense_prompt_embeddings=dense_embeddings,
-                multimask_output=multimask_output,
             )
             masks = self.postprocess_masks(
                 low_res_masks,
