@@ -3,7 +3,7 @@
 
 *Han Shu, Wenshuo Li, Yehui Tang, Yiman Zhang, Yihao Chen, Houqiang Li, Yunhe Wang, Xinghao Chen*
 
-*arXiv 2023*
+*AAAI 2025*
 
 <a href="https://arxiv.org/abs/2312.13789"><img src="https://img.shields.io/static/v1?label=Paper&message=arXiv&color=red&logo=arxiv"></a>
 <a href="https://huggingface.co/spaces/merve/tinysam"><img src="https://img.shields.io/static/v1?label=HuggingFace&message=Demo&color=yellow"></a>
@@ -13,6 +13,7 @@ https://github.com/user-attachments/assets/4239f4c7-1e71-4be0-a59d-b81e6d881645
 
 
 ## Updates
+* **2025/01/09**: TinySAM is accepted by AAAI 2025.
 * **2024/01/06**: [Demo](https://openxlab.org.cn/apps/detail/shuh15/TinySAM) of TinySAM is now available in **OpenXLab**. Thanks for the GPU grant.
 * **2023/12/27**: [Models](https://huggingface.co/merve/tinysam) and [demo](https://huggingface.co/spaces/merve/tinysam) of TinySAM are now available in **Hugging Face**. Thanks for [merveenoyan](https://github.com/merveenoyan).
 * **2023/12/27**: Pre-trained models and codes of [Q-TinySAM](#usage) (quantized variant) are released.
