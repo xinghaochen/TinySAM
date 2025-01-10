@@ -9,8 +9,7 @@
 <a href="https://huggingface.co/spaces/merve/tinysam"><img src="https://img.shields.io/static/v1?label=HuggingFace&message=Demo&color=yellow"></a>
 [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg)](https://openxlab.org.cn/apps/detail/shuh15/TinySAM)
 
-https://github.com/user-attachments/assets/4239f4c7-1e71-4be0-a59d-b81e6d881645
-
+https://github.com/user-attachments/assets/c4bb50ab-bc20-419d-8c22-e36fe6a661ee
 
 ## Updates
 * **2025/01/09**: TinySAM is accepted by AAAI 2025.
