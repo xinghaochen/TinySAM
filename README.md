@@ -74,8 +74,8 @@ We follow the setting of original [SAM](https://arxiv.org/abs/2304.02643) paper 
 | SAM-B                 |487| 43.4/41.0*     | 40.8       | 
 | FastSAM                 |344| 37.9     | 34.5       | 
 | MobileSAM            | 42.0|41.0     | 37.0       | 
-| **TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/1.0/tinysam.pth)       | 42.0|41.9     | 38.6       | 
-| **Q-TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/2.0/tinysam_w8a8.pth)            | 20.3|41.3     | 37.2      | 
+| **TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/3.0/tinysam_42.3.pth)       | 42.0|42.3     | 38.6       | 
+| **Q-TinySAM**  [\[ckpt\]](https://github.com/xinghaochen/TinySAM/releases/download/2.0/tinysam_w8a8.pth)            | 20.3|41.4     | 37.2      | 
 
 <sup>\* Results of single output ([`multimask_output=False`](https://github.com/facebookresearch/segment-anything/blob/main/segment_anything/predictor.py#L98)). </sup></br>
 
@@ -86,21 +86,7 @@ Run the following code to perform evaluation for zero-shot instance segmentation
 ```
 cd eval; sh eval_coco.sh
 ```
-The results should be:
-```
-Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.419
-Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.683
-Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.436
-Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.260
-Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.456
-Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.583
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.325
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.511
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.532
-Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.390
-Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.577
-Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.671
-```
+
 
 ## Acknowledgements
 We thank the following projects: [SAM](https://github.com/facebookresearch/segment-anything), [MobileSAM](https://github.com/ChaoningZhang/MobileSAM), [TinyViT](https://github.com/microsoft/Cream).
